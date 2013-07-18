@@ -3,7 +3,7 @@ C 37700 41100 0 0 0 title-B.sym
 C 49500 26800 1 0 0 ATmega8.sym
 {
 T 49800 31400 5 10 1 1 0 0 1
-device=ATmega328
+device=ATmega168
 T 49800 31400 5 10 0 1 0 0 1
 value=ATmega8
 T 49800 31900 5 10 0 0 0 0 1
@@ -445,7 +445,7 @@ refdes=LED5
 T 44100 25900 5 10 0 0 270 0 1
 symversion=0.1
 T 43900 26200 5 10 1 1 0 0 1
-color=mode 0
+color=manual mode
 }
 C 43400 28000 1 270 0 resistor-1.sym
 {
@@ -486,7 +486,7 @@ refdes=LED6
 T 41100 25900 5 10 0 0 270 0 1
 symversion=0.1
 T 40900 26200 5 10 1 1 0 0 1
-color=mode 1
+color=sound analyser mode
 }
 C 40400 28000 1 270 0 resistor-1.sym
 {
@@ -527,7 +527,7 @@ refdes=LED7
 T 37900 25800 5 10 0 0 270 0 1
 symversion=0.1
 T 37700 26100 5 10 1 1 0 0 1
-color=mode 2
+color=pre-programmed mode
 }
 C 37200 27900 1 270 0 resistor-1.sym
 {
