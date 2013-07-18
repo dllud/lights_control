@@ -31,7 +31,6 @@
 #include "sysmods/adc.h"
 #include "sysmods/digitalrw.h"
 #include "sysmods/pwm.h"
-#include "usermods/example.h"
 
 /* Initializes AVR microcontroller. */
 void avr_init(void)
@@ -59,10 +58,8 @@ int main(void) {
 	UART_init();
 	ADC_init_10bit();
 	DIGITALRW_init();
-	PWM_init(&EXAMPLE_PWM_PIN);
 	
 	/* usermods init */
-	EXAMPLE_init();
 
 	enable_interrupts; /* Enables all interrupts (node.h) */
 	
@@ -75,6 +72,5 @@ int main(void) {
 		PWM_task();
 		
 		/* usermods task */
-		EXAMPLE_task();
 	}
 }

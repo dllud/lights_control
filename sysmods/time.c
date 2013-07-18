@@ -36,7 +36,6 @@
 #include "led.h"
 #include "digitalrw.h"
 #include "pwm.h"
-#include "usermods/example.h"
 
 /* Local variables */
 static uint8_t TIME_curr_time; /* incremented at each 200 us interruption */
@@ -157,12 +156,11 @@ void TIME_task(void)
 		/* 100 ms timers (needs 10 ms)
 		 * var char:  1-255 => 0.1s - 25.5s
 		 * var int: 1-65535 => 0.1s - 6553.5s (~109m, ~1.8h) */
-		#if 1
+		#if 0
 			++t100ms_n10ms;
 			if(t100ms_n10ms >= TIME_100MS_N10MS)
 			{
 				t100ms_n10ms = 0; /* 100 ms = 10 * 10 ms */
-				++EXAMPLE_timer_pwm;
 				/*++MODULEXXX_timer; :cfg02*/
 			}
 		#endif
@@ -170,12 +168,11 @@ void TIME_task(void)
 		/* 1s timers (needs 10 ms)
 		 * var char:  1-255 => 1s - 255s (~4.2m)
 		 * var int: 1-65535 => 1s - 65535s (~1092m, ~18.2h) */
-		#if 1
+		#if 0
 			++t1s_n10ms;
 			if(t1s_n10ms >= TIME_1S_N10MS)
 			{
 				t1s_n10ms = 0; /* 1 s = 100 * 10 ms */
-				++EXAMPLE_timer_adc;
 				/*++MODULEXXX_timer; :cfg02*/
 			
 				/* 1 min timers (needs 1 s)
