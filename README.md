@@ -7,9 +7,9 @@ In a party tent there are the following lightning devices:
 
 These devices are controlled using a microcontroller (AVR atmega168) based system. The system is composed by an electronic circuit and the code running in the microcontroller. The circuit schematic is available in [gschem gEDA](http://www.geda-project.org/) format at [lights_control.sch](/usermods/lights_control.sch). The code is available in [the lights_control GitHub repository](https://github.com/dllud/lights_control).
 
-The lights_control system allows turning on/off each lightning device independently and dimming the output of the white LEDs. With such control an operator can put on a light show. The system provides a physical interface which is sketched in the following draw:
+The lights_control system allows turning on/off each lightning device independently and dimming the output of the white LEDs. With such control an operator can put on a light show. The system provides a physical interface which is sketched in [interface.svg](/usermods/interface.svg) and also below:
 
-![lights_control physical interface sketch](/usermods/interface.svg)
+![lights_control physical interface sketch](http://img94.imageshack.us/img94/9311/0yfw.png)
 
 Cliparts by [Vector4free](http://vector4free.com/vector/volume-knob/), [carlitos](https://openclipart.org/detail/8148/led-assortment-by-carlitos), [SABROG](https://openclipart.org/detail/15012/white-circle-button-by-sabrog-15012) and [Michele Brami](https://openclipart.org/detail/28117/round_black_crystal_button-by-mi_brami).
 
