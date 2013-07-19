@@ -395,10 +395,10 @@ C 47900 27400 1 0 1 switch-pushbutton-spdt-1.sym
 {
 T 48350 27275 5 10 0 0 0 6 1
 device=SWITCH_PUSHBUTTON_SPDT
-T 47100 27800 5 10 1 1 0 6 1
+T 46900 27800 5 10 1 1 0 6 1
 refdes=S2
-T 47200 27800 5 10 1 1 0 0 1
-description=invert
+T 47000 27800 5 10 1 1 0 0 1
+description=invert / select
 }
 C 47900 26400 1 0 1 switch-pushbutton-spdt-1.sym
 {
@@ -486,7 +486,7 @@ refdes=LED6
 T 41100 25900 5 10 0 0 270 0 1
 symversion=0.1
 T 40900 26200 5 10 1 1 0 0 1
-color=sound analyser mode
+color=sound analyzer mode
 }
 C 40400 28000 1 270 0 resistor-1.sym
 {
@@ -527,7 +527,7 @@ refdes=LED7
 T 37900 25800 5 10 0 0 270 0 1
 symversion=0.1
 T 37700 26100 5 10 1 1 0 0 1
-color=pre-programmed mode
+color=preset mode
 }
 C 37200 27900 1 270 0 resistor-1.sym
 {
