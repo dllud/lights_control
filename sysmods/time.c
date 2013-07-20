@@ -36,6 +36,7 @@
 #include "led.h"
 #include "digitalrw.h"
 #include "pwm.h"
+#include "usermods/manual.h"
 
 /* Local variables */
 static uint8_t TIME_curr_time; /* incremented at each 200 us interruption */
@@ -85,8 +86,6 @@ void TIME_task(void)
 	uint8_t elapsed_time; /* N * 200us */
 	static uint8_t t1ms_n200us = 0;
 	static uint8_t t10ms_n200us = 0;
-	static uint8_t t100ms_n10ms = 0;
-	static uint8_t t1s_n10ms = 0;
 
 #if 0  
 /* Copy to above the necessary variables according to the time units you want
@@ -126,6 +125,7 @@ void TIME_task(void)
 		t1ms_n200us -= TIME_1MS_N200US; /* 1 ms = 5 * 200 us */
 		++DIGITALRW_timer;
 		++PWM_timer;
+		++MANUAL_timer_white_blink;
 		/*++MODULEXXX_timer; :cfg02*/
 	}
 #endif
