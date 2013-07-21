@@ -5,11 +5,11 @@ In a party tent there are the following lightning devices:
 * 2 white LED strips, each covering one half of the tent (left and right side);
 * 1 set of white LEDs inside a translucent box.
 
-These devices are controlled using a microcontroller (AVR atmega168) based system. The system is composed by an electronic circuit and the code running in the microcontroller. The circuit schematic is available in [gschem gEDA](http://www.geda-project.org/) format at [lights_control.sch](/usermods/lights_control.sch). The code is available in [the lights_control GitHub repository](https://github.com/dllud/lights_control).
+These devices are controlled using a microcontroller (AVR atmega168) based system. The system is composed by an electronic circuit and the code running in the microcontroller. The circuit schematic is available in [gschem gEDA](http://www.geda-project.org/) format at [lights_control.sch](/usermods/lights_control.sch). The code is based on [rr-avr-os](https://github.com/dllud/rr-avr-os) and available in [the lights_control GitHub repository](https://github.com/dllud/lights_control).
 
 The lights_control system allows turning on/off each lightning device independently and dimming the output of the white LEDs. With such control an operator can put on a light show. The system provides a physical interface which is sketched in [interface.svg](/usermods/interface.svg) and also below:
 
-![lights_control physical interface sketch](http://img6.imageshack.us/img6/8017/gw5s.png)
+![lights_control physical interface sketch](http://img818.imageshack.us/img818/5337/q50x.png)
 
 Cliparts by [Vector4free](http://vector4free.com/vector/volume-knob/), [carlitos](https://openclipart.org/detail/8148/led-assortment-by-carlitos), [SABROG](https://openclipart.org/detail/15012/white-circle-button-by-sabrog-15012) and [Michele Brami](https://openclipart.org/detail/28117/round_black_crystal_button-by-mi_brami).
 

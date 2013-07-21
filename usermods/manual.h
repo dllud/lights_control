@@ -20,8 +20,8 @@
 /* Global includes for AVR */
 #include <avr/io.h>
 
-extern uint8_t MANUAL_timer_white_blink;  /* 1 ms */
-extern uint8_t MANUAL_timer_UV_blink;  /* 1 ms */
+extern uint16_t MANUAL_timer_white_blink;  /* 1 ms */
+extern uint16_t MANUAL_timer_UV_blink;  /* 1 ms */
 
 /* public functions **/
 void MANUAL_init(void);
