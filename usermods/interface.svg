@@ -16,7 +16,7 @@
    id="svg2"
    xml:space="preserve"
    inkscape:version="0.48.3.1 r9886"
-   sodipodi:docname="lights_control_interface.svg"
+   sodipodi:docname="interface.svg"
    inkscape:export-filename="/media/partilha/documents/engenharia_informatica/avr/lights_control/src/usermods/lights_control_interface.png"
    inkscape:export-xdpi="18.334005"
    inkscape:export-ydpi="18.334005"><title
@@ -29,14 +29,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1280"
-     inkscape:window-height="976"
+     inkscape:window-width="1440"
+     inkscape:window-height="852"
      id="namedview76"
      showgrid="false"
      inkscape:zoom="0.26262168"
-     inkscape:cx="1809.2766"
+     inkscape:cx="1816.8921"
      inkscape:cy="465.94624"
-     inkscape:window-x="1024"
+     inkscape:window-x="0"
      inkscape:window-y="26"
      inkscape:window-maximized="1"
      inkscape:current-layer="g10"
@@ -1251,19 +1251,21 @@
      id="tspan3109"
      sodipodi:role="line">0 Hz</tspan></text>
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
    id="text3107-8"
-   y="70.94223"
-   x="-383.68585"
+   y="-23.490187"
+   x="-405.00931"
    style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
    xml:space="preserve"><tspan
      style="font-size:38.40000153px"
-     y="70.94223"
-     x="-383.68585"
+     y="-23.490187"
+     x="-405.00931"
      id="tspan3109-3"
-     sodipodi:role="line">50 Hz</tspan></text>
+     sodipodi:role="line">70 Hz</tspan></text>
+
 
 <text
    transform="scale(1,-1)"
@@ -1279,6 +1281,25 @@
      id="tspan3109-4"
      sodipodi:role="line">RV2</tspan></text>
 
+
+<text
+   sodipodi:linespacing="125%"
+   id="text3107-8-32"
+   y="56.281227"
+   x="-322.35962"
+   style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans;text-anchor:middle;text-align:center"
+   xml:space="preserve"
+   transform="scale(1,-1)"><tspan
+     style="font-size:38.40000152999999727px;text-anchor:middle;text-align:center"
+     y="56.281227"
+     x="-386.31586"
+     id="tspan3109-3-1"
+     sodipodi:role="line">always</tspan><tspan
+     style="font-size:38.40000152999999727px;text-anchor:middle;text-align:center"
+     y="104.28123"
+     x="-386.31586"
+     sodipodi:role="line"
+     id="tspan3537">on</tspan></text>
 </g><text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1291,6 +1312,7 @@
      x="234.53435"
      id="tspan3353"
      sodipodi:role="line" /></text>
+
 
 <g
    id="g3444"
@@ -1308,6 +1330,7 @@
      id="tspan3109-4-0"
      sodipodi:role="line">S3</tspan></text>
 
+
 <text
    sodipodi:linespacing="125%"
    id="text3107-2-49"
@@ -1321,6 +1344,7 @@
      x="259.47388"
      id="tspan3109-4-2"
      sodipodi:role="line">left</tspan></text>
+
 
 <g
    id="g14355"
@@ -1388,6 +1412,7 @@
      id="tspan3109-4-0-7"
      sodipodi:role="line">S4</tspan></text>
 
+
 <text
    sodipodi:linespacing="125%"
    id="text3107-2-49-1"
@@ -1401,6 +1426,7 @@
      x="241.23232"
      id="tspan3109-4-2-1"
      sodipodi:role="line">right</tspan></text>
+
 
 <g
    id="g14355-5"
@@ -1454,7 +1480,10 @@
      inkscape:export-xdpi="21.969999"
      inkscape:export-ydpi="21.969999" /></g></g><g
    transform="translate(804.37673,-8.6851392)"
-   id="g3406-3"><g
+   id="g3406-3"
+   inkscape:export-filename="/home/david/Desktop/interface.png"
+   inkscape:export-xdpi="58.740585"
+   inkscape:export-ydpi="58.740585"><g
    transform="matrix(0.14918766,-0.9888089,0.9888089,0.14918766,-1165.4438,285.13625)"
    id="g16-5"><g
      id="g18-4"
@@ -1537,6 +1566,7 @@
      id="tspan3109-1"
      sodipodi:role="line">off</tspan></text>
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1556,6 +1586,7 @@
      sodipodi:role="line"
      id="tspan3793">brightness</tspan></text>
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1569,6 +1600,7 @@
      x="-514.96844"
      id="tspan3109-4-6"
      sodipodi:role="line">RV3</tspan></text>
+
 
 </g><g
    transform="translate(1.7480131,595.89233)"
@@ -1651,19 +1683,21 @@
      id="tspan3109-5"
      sodipodi:role="line">0 Hz</tspan></text>
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
    id="text3107-8-4"
-   y="70.94223"
-   x="-383.68585"
+   y="-17.397772"
+   x="-398.9169"
    style="font-size:16px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
    xml:space="preserve"><tspan
      style="font-size:38.40000153px"
-     y="70.94223"
-     x="-383.68585"
+     y="-17.397772"
+     x="-398.9169"
      id="tspan3109-3-3"
-     sodipodi:role="line">50 Hz</tspan></text>
+     sodipodi:role="line">70 Hz</tspan></text>
+
 
 <text
    transform="scale(1,-1)"
@@ -1679,6 +1713,25 @@
      id="tspan3109-4-07"
      sodipodi:role="line">RV1</tspan></text>
 
+
+<text
+   sodipodi:linespacing="125%"
+   id="text3107-8-32-7"
+   y="64.962761"
+   x="-326.34958"
+   style="font-size:16px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+   xml:space="preserve"
+   transform="scale(1,-1)"><tspan
+     style="font-size:38.40000153px;text-align:center;text-anchor:middle"
+     y="64.962761"
+     x="-326.34958"
+     id="tspan3109-3-1-9"
+     sodipodi:role="line">always</tspan><tspan
+     style="font-size:38.40000153px;text-align:center;text-anchor:middle"
+     y="112.96276"
+     x="-326.34958"
+     sodipodi:role="line"
+     id="tspan3537-8">on</tspan></text>
 </g><text
    sodipodi:linespacing="125%"
    id="text3107-1-6"
@@ -1693,6 +1746,7 @@
      id="tspan3109-5-2"
      sodipodi:role="line">white</tspan></text>
 
+
 <text
    sodipodi:linespacing="125%"
    id="text3107-1-6-7"
@@ -1706,6 +1760,7 @@
      x="-1010.5559"
      id="tspan3109-5-2-4"
      sodipodi:role="line">UV</tspan></text>
+
 
 <g
    id="g4068"
@@ -1755,6 +1810,7 @@
      y="-294.82544"
      style="font-size:38.40000153px">S1</tspan></text>
 
+
 <text
    transform="scale(1,-1)"
    xml:space="preserve"
@@ -1768,6 +1824,7 @@
      x="-63.763966"
      y="-292.21951"
      style="font-size:38.40000153px">mode</tspan></text>
+
 
 </g><g
    transform="translate(335.39243,-65.181237)"
@@ -1817,6 +1874,7 @@
      y="-331.30856"
      style="font-size:38.40000153px">S2</tspan></text>
 
+
 <text
    transform="scale(1,-1)"
    xml:space="preserve"
@@ -1830,6 +1888,7 @@
      x="-100.24708"
      y="-289.61356"
      style="font-size:38.40000153px">invert / select</tspan></text>
+
 
 </g><g
    id="g5140"
@@ -1901,6 +1960,7 @@
      id="tspan3109-4-2-6-1"
      sodipodi:role="line">manual</tspan></text>
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1914,6 +1974,7 @@
      x="-36.774578"
      sodipodi:role="line"
      id="tspan4337-7-8-4">LED5</tspan></text>
+
 
 </g><g
    id="g5182"
@@ -1937,6 +1998,7 @@
      x="-15.688743"
      sodipodi:role="line"
      id="tspan4337">analyzer</tspan></text>
+
 
 </g><g
    transform="matrix(5.9667112,0,0,-5.9667112,-370.09867,1786.2668)"
@@ -2010,6 +2072,7 @@
      sodipodi:role="line"
      id="tspan4337-7-8-4-8">LED6</tspan></text>
 
+
 </g><g
    id="g5219"
    transform="translate(60.924139,-21.323449)"><text
@@ -2025,6 +2088,7 @@
      x="279.88593"
      y="-646.02277"
      style="font-size:38.40000153px">preset</tspan></text>
+
 
 <g
    transform="matrix(5.9667112,0,0,-5.9667112,-370.09867,1786.2668)"
@@ -2098,6 +2162,7 @@
      sodipodi:role="line"
      id="tspan4337-7-8-4-3">LED7</tspan></text>
 
+
 </g><g
    id="g5340"
    transform="translate(118.80207,21.323448)"><g
@@ -2170,6 +2235,7 @@
      sodipodi:role="line"
      id="tspan4337-7">left</tspan></text>
 
+
 </g><text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -2183,6 +2249,7 @@
      x="715.66174"
      sodipodi:role="line"
      id="tspan4337-7-8-4-9">LED2</tspan></text>
+
 
 </g><g
    id="g5325"
@@ -2256,6 +2323,7 @@
      sodipodi:role="line"
      id="tspan4337-7-8">right</tspan></text>
 
+
 </g><text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -2269,6 +2337,7 @@
      x="867.97211"
      sodipodi:role="line"
      id="tspan4337-7-8-4-31">LED3</tspan></text>
+
 
 </g><g
    id="g5291"
@@ -2340,6 +2409,7 @@
      sodipodi:role="line"
      id="tspan4337-7-8-0">UV</tspan></text>
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -2353,6 +2423,7 @@
      x="1020.2824"
      sodipodi:role="line"
      id="tspan4337-7-8-4-1">LED1</tspan></text>
+
 
 </g><g
    id="g5311"
@@ -2424,6 +2495,7 @@
      sodipodi:role="line"
      id="tspan4337-7-8-4-81">LED4</tspan></text>
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -2437,6 +2509,7 @@
      x="1168.2247"
      sodipodi:role="line"
      id="tspan4337-7-8-0-1">box</tspan></text>
+
 
 </g><text
    sodipodi:linespacing="125%"
@@ -2452,6 +2525,7 @@
      id="tspan3109-5-2-4-1"
      sodipodi:role="line">output</tspan></text>
 
+
 <text
    sodipodi:linespacing="125%"
    id="text3107-1-6-7-3"
@@ -2465,5 +2539,6 @@
      x="-181.44673"
      id="tspan3109-5-2-4-9"
      sodipodi:role="line">main</tspan></text>
+
 
 </g></svg>

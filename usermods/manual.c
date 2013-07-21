@@ -26,7 +26,7 @@
 #include "sysmods/adc.h"
 #include "ports.h"
 
-#define BLINK_PERIOD 33 /* ms ~= 50 Hz*/
+#define BLINK_PERIOD 20 /* ms */
 
 /* Global varibales ::vars **/
 uint8_t MANUAL_timer_white_blink = 0;  /* 1 ms*/
