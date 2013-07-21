@@ -17,7 +17,7 @@
    xml:space="preserve"
    inkscape:version="0.48.3.1 r9886"
    sodipodi:docname="interface.svg"
-   inkscape:export-filename="/media/partilha/documents/engenharia_informatica/avr/lights_control/src/usermods/lights_control_interface.png"
+   inkscape:export-filename="/media/share/documents/engenharia_informatica/avr/lights_control/src/usermods/lights_control_interface.png"
    inkscape:export-xdpi="18.334005"
    inkscape:export-ydpi="18.334005"><title
      id="title5415">lights_control operator interface</title><sodipodi:namedview
@@ -34,7 +34,7 @@
      id="namedview76"
      showgrid="false"
      inkscape:zoom="0.26262168"
-     inkscape:cx="1816.8921"
+     inkscape:cx="1824.5076"
      inkscape:cy="465.94624"
      inkscape:window-x="0"
      inkscape:window-y="26"
@@ -1252,6 +1252,7 @@
      sodipodi:role="line">0 Hz</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1267,6 +1268,7 @@
      sodipodi:role="line">70 Hz</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1280,6 +1282,7 @@
      x="-514.96844"
      id="tspan3109-4"
      sodipodi:role="line">RV2</tspan></text>
+
 
 
 <text
@@ -1300,6 +1303,7 @@
      x="-386.31586"
      sodipodi:role="line"
      id="tspan3537">on</tspan></text>
+
 </g><text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1312,6 +1316,7 @@
      x="234.53435"
      id="tspan3353"
      sodipodi:role="line" /></text>
+
 
 
 <g
@@ -1331,6 +1336,7 @@
      sodipodi:role="line">S3</tspan></text>
 
 
+
 <text
    sodipodi:linespacing="125%"
    id="text3107-2-49"
@@ -1344,6 +1350,7 @@
      x="259.47388"
      id="tspan3109-4-2"
      sodipodi:role="line">left</tspan></text>
+
 
 
 <g
@@ -1413,6 +1420,7 @@
      sodipodi:role="line">S4</tspan></text>
 
 
+
 <text
    sodipodi:linespacing="125%"
    id="text3107-2-49-1"
@@ -1426,6 +1434,7 @@
      x="241.23232"
      id="tspan3109-4-2-1"
      sodipodi:role="line">right</tspan></text>
+
 
 
 <g
@@ -1567,6 +1576,7 @@
      sodipodi:role="line">off</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1587,6 +1597,7 @@
      id="tspan3793">brightness</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1600,6 +1611,7 @@
      x="-514.96844"
      id="tspan3109-4-6"
      sodipodi:role="line">RV3</tspan></text>
+
 
 
 </g><g
@@ -1684,6 +1696,7 @@
      sodipodi:role="line">0 Hz</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1699,6 +1712,7 @@
      sodipodi:role="line">70 Hz</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1712,6 +1726,7 @@
      x="-514.96844"
      id="tspan3109-4-07"
      sodipodi:role="line">RV1</tspan></text>
+
 
 
 <text
@@ -1732,6 +1747,7 @@
      x="-326.34958"
      sodipodi:role="line"
      id="tspan3537-8">on</tspan></text>
+
 </g><text
    sodipodi:linespacing="125%"
    id="text3107-1-6"
@@ -1747,6 +1763,7 @@
      sodipodi:role="line">white</tspan></text>
 
 
+
 <text
    sodipodi:linespacing="125%"
    id="text3107-1-6-7"
@@ -1760,6 +1777,7 @@
      x="-1010.5559"
      id="tspan3109-5-2-4"
      sodipodi:role="line">UV</tspan></text>
+
 
 
 <g
@@ -1811,6 +1829,7 @@
      style="font-size:38.40000153px">S1</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    xml:space="preserve"
@@ -1824,6 +1843,7 @@
      x="-63.763966"
      y="-292.21951"
      style="font-size:38.40000153px">mode</tspan></text>
+
 
 
 </g><g
@@ -1875,6 +1895,7 @@
      style="font-size:38.40000153px">S2</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    xml:space="preserve"
@@ -1888,6 +1909,7 @@
      x="-100.24708"
      y="-289.61356"
      style="font-size:38.40000153px">invert / select</tspan></text>
+
 
 
 </g><g
@@ -1961,6 +1983,7 @@
      sodipodi:role="line">manual</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -1974,6 +1997,7 @@
      x="-36.774578"
      sodipodi:role="line"
      id="tspan4337-7-8-4">LED5</tspan></text>
+
 
 
 </g><g
@@ -1998,6 +2022,7 @@
      x="-15.688743"
      sodipodi:role="line"
      id="tspan4337">analyzer</tspan></text>
+
 
 
 </g><g
@@ -2073,6 +2098,7 @@
      id="tspan4337-7-8-4-8">LED6</tspan></text>
 
 
+
 </g><g
    id="g5219"
    transform="translate(60.924139,-21.323449)"><text
@@ -2088,6 +2114,7 @@
      x="279.88593"
      y="-646.02277"
      style="font-size:38.40000153px">preset</tspan></text>
+
 
 
 <g
@@ -2163,6 +2190,7 @@
      id="tspan4337-7-8-4-3">LED7</tspan></text>
 
 
+
 </g><g
    id="g5340"
    transform="translate(118.80207,21.323448)"><g
@@ -2236,6 +2264,7 @@
      id="tspan4337-7">left</tspan></text>
 
 
+
 </g><text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -2249,6 +2278,7 @@
      x="715.66174"
      sodipodi:role="line"
      id="tspan4337-7-8-4-9">LED2</tspan></text>
+
 
 
 </g><g
@@ -2324,6 +2354,7 @@
      id="tspan4337-7-8">right</tspan></text>
 
 
+
 </g><text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -2337,6 +2368,7 @@
      x="867.97211"
      sodipodi:role="line"
      id="tspan4337-7-8-4-31">LED3</tspan></text>
+
 
 
 </g><g
@@ -2410,6 +2442,7 @@
      id="tspan4337-7-8-0">UV</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -2423,6 +2456,7 @@
      x="1020.2824"
      sodipodi:role="line"
      id="tspan4337-7-8-4-1">LED1</tspan></text>
+
 
 
 </g><g
@@ -2496,6 +2530,7 @@
      id="tspan4337-7-8-4-81">LED4</tspan></text>
 
 
+
 <text
    transform="scale(1,-1)"
    sodipodi:linespacing="125%"
@@ -2509,6 +2544,7 @@
      x="1168.2247"
      sodipodi:role="line"
      id="tspan4337-7-8-0-1">box</tspan></text>
+
 
 
 </g><text
@@ -2526,6 +2562,7 @@
      sodipodi:role="line">output</tspan></text>
 
 
+
 <text
    sodipodi:linespacing="125%"
    id="text3107-1-6-7-3"
@@ -2539,6 +2576,7 @@
      x="-181.44673"
      id="tspan3109-5-2-4-9"
      sodipodi:role="line">main</tspan></text>
+
 
 
 </g></svg>

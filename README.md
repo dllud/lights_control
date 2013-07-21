@@ -9,7 +9,7 @@ These devices are controlled using a microcontroller (AVR atmega168) based syste
 
 The lights_control system allows turning on/off each lightning device independently and dimming the output of the white LEDs. With such control an operator can put on a light show. The system provides a physical interface which is sketched in [interface.svg](/usermods/interface.svg) and also below:
 
-![lights_control physical interface sketch](http://img22.imageshack.us/img22/8783/wrpc.png)
+![lights_control physical interface sketch](http://img6.imageshack.us/img6/8017/gw5s.png)
 
 Cliparts by [Vector4free](http://vector4free.com/vector/volume-knob/), [carlitos](https://openclipart.org/detail/8148/led-assortment-by-carlitos), [SABROG](https://openclipart.org/detail/15012/white-circle-button-by-sabrog-15012) and [Michele Brami](https://openclipart.org/detail/28117/round_black_crystal_button-by-mi_brami).
 
