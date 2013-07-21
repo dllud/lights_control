@@ -34,8 +34,7 @@
 #include "usermods/manual.h"
 
 /* Initializes AVR microcontroller. */
-void avr_init(void)
-{
+void avr_init(void) {
 	/* DDR - Data Direction Register.
 	 * Specifies if a port should be an input 0 or an output 1.
 	 * PORTA does not exist in ATmegaX8 */
@@ -45,9 +44,7 @@ void avr_init(void)
 	DDRD = 0x6E; /* Arduino's digital outputs 0-7. RX = 0 and TX = 1, 0110 1110 */
 
 	/* All outputs = 0 and pull-ups off to allow reading. */
-	PORTB = 0x00;
-	PORTC = 0x00;
-	PORTD = 0x00;
+	PORTB = PORTC = PORTD = 0x00;
 }
 
 /* Main cicle. Initializes modules and calls their tasks in round-robin. */
@@ -65,8 +62,7 @@ int main(void) {
 
 	enable_interrupts; /* Enables all interrupts (node.h) */
 	
-	while(1)
-	{
+	while(1) {
 		/* sysmods task */
 		TIME_task();
 		LED_task();
