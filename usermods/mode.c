@@ -1,8 +1,8 @@
  /*
- * manual.c
+ * mode.c
  * Copyright (C) 2013 David Ludovino david.ludovino@gmail.com
  * 
- * Controls the lights according to the input from the physical interface.
+ * Selects the operation mode for the system.
  * 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License Version 3 as
@@ -20,19 +20,29 @@
 /* Global inclues for AVR */
 
 /* Includes specific to this module */
-#include "manual.h"
-#include "sysmods/pwm.h"
-#include "sysmods/digitalrw.h"
-#include "sysmods/adc.h"
+#include "mode.h"
 #include "ports.h"
+#include "sysmods/digitalrw.h"
+
+#define NUM_MODES 3
+#define LEDS_PORT MANUAL_LED_PORT
+#define BASE_PIN MANUAL_LED_PIN
 
 /* Global varibales ::vars **/
-uint16_t MANUAL_timer_white_blink;  /* 1 ms */
-uint16_t MANUAL_timer_UV_blink;  /* 1 ms */
+uint8_t MODE_mode;
 
 /* Local variables **/
-uint8_t white_brightness;
 
-void MANUAL_init(void) { }
+void MODE_init(void) { }
 
-void MANUAL_task(void) { }
+void MODE_task(void) {
+	static uint8_t pressed;
+	if(DIGITALRW_read(MODE_PORT, MODE_PIN) && !pressed) {
+		DIGITALRW_write(LEDS_PORT, BASE_PIN + MODE_mode, 0);
+		MODE_mode = ++MODE_mode % NUM_MODES;
+		DIGITALRW_write(LEDS_PORT, BASE_PIN + MODE_mode, 1);
+		pressed = 1;
+	}
+	else
+		pressed = 0;
+}

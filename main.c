@@ -32,6 +32,8 @@
 #include "sysmods/digitalrw.h"
 #include "sysmods/pwm.h"
 #include "usermods/manual.h"
+#include "usermods/mode.h"
+#include "usermods/ports.h"
 
 /* Initializes AVR microcontroller. */
 void avr_init(void) {
@@ -58,7 +60,9 @@ int main(void) {
 	DIGITALRW_init();
 	
 	/* usermods init */
-	MANUAL_init();
+	/* MANUAL_init();
+	MODE_init(); */
+	PORTS_init();
 
 	enable_interrupts; /* Enables all interrupts (node.h) */
 	
@@ -71,5 +75,6 @@ int main(void) {
 		
 		/* usermods task */
 		MANUAL_task();
+		MODE_task();
 	}
 }
