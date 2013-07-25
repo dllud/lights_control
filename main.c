@@ -57,11 +57,8 @@ int main(void) {
 	LED_init(1);
 	UART_init();
 	ADC_init_8bit();
-	DIGITALRW_init();
 	
 	/* usermods init */
-	/* MANUAL_init();
-	MODE_init(); */
 	PORTS_init();
 
 	enable_interrupts; /* Enables all interrupts (node.h) */
@@ -70,8 +67,10 @@ int main(void) {
 		/* sysmods task */
 		TIME_task();
 		LED_task();
+		/* These are not needed as timed writes are not
+		 * used in lights_control
 		DIGITALRW_task();
-		PWM_task();
+		PWM_task(); */
 		
 		/* usermods task */
 		MANUAL_task();
