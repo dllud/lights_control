@@ -20,7 +20,7 @@
 #define PWM_H_
 
 #define PWM_write(port, value) ((port) = (value))
-#define PWM_reset(port) ((port) = 0xFF) /* Set the duty cycle to 0%. */
+#define PWM_reset(port) ((port) = 0x00) /* Set the duty cycle to 0%. */
 
 extern uint32_t PWM_timer;  /* 1 ms */
 

@@ -9,12 +9,12 @@ These devices are controlled using a microcontroller (AVR atmega168) based syste
 
 The lights_control system allows turning on/off each lightning device independently and dimming the output of the white LEDs. With such control an operator can put on a light show. The system provides a physical interface which is sketched in [interface.svg](/usermods/interface.svg) and also below:
 
-![lights_control physical interface sketch](http://img818.imageshack.us/img818/5337/q50x.png)
+![lights_control physical interface sketch](http://img33.imageshack.us/img33/4387/1go.png)
 
 Cliparts by [Vector4free](http://vector4free.com/vector/volume-knob/), [carlitos](https://openclipart.org/detail/8148/led-assortment-by-carlitos), [SABROG](https://openclipart.org/detail/15012/white-circle-button-by-sabrog-15012) and [Michele Brami](https://openclipart.org/detail/28117/round_black_crystal_button-by-mi_brami).
 
 Push-button S1 (mode) allows the selection between one of the three operation modes provided by lights_control (the current mode is indicated by LEDs 5-7):
-* manual - The operator has full control over the lights. It can use the variable resistors RV1-2 to set a blink rate of 0-70 Hz for the UV and white LED strips. With RV1-2 he can also turn them always on. RV3 dims the white LED strips from full power to off. Push-buttons S3 and S4 turn on the left and right white LED strips when pushed, overriding the commands of RV2. When pushed once, S2 inverts the functioning of S3-4, making them turn off the LED strips when pushed. Pushing again S2 returns S3-4 to normal operation.
+* manual - The operator has full control over the lights. It can use the variable resistors RV1-2 to set a blink rate of 0-70 Hz for the UV and white LED strips. With RV1-2 he can also turn them always on. RV3 dims the white LED strips from full power to off. Push-buttons S3 and S4 turn on the left and right white LED strips when pushed, overriding the commands of RV2.
 * sound analyzer - Reads the sound input connected to ADC3-4 and does a rudimentary form of beat detection. When a beat is detected the system flashes the white LED strips.
 * preset - Runs lightning effects that were programmed beforehand and are embedded in the code. S2 allows the selection between presets.
 

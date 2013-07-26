@@ -122,6 +122,7 @@ void TIME_task(void) {
 		++DIGITALRW_timer;
 		++PWM_timer;
 		++MANUAL_timer_white_blink;
+		++MANUAL_timer_UV_blink;
 		/*++MODULEXXX_timer; :cfg02*/
 	}
 #endif

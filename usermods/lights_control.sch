@@ -564,12 +564,12 @@ description=mode
 }
 C 46900 27000 1 0 0 switch-pushbutton-no-1.sym
 {
-T 46700 27300 5 10 1 1 0 0 1
+T 46900 27300 5 10 1 1 0 0 1
 refdes=S2
 T 47300 27600 5 10 0 0 0 0 1
 device=SWITCH_PUSHBUTTON_NO
-T 47000 27300 5 10 1 1 0 0 1
-description=invert / select
+T 47200 27300 5 10 1 1 0 0 1
+description=select
 }
 C 46800 25700 1 0 0 switch-pushbutton-no-1.sym
 {

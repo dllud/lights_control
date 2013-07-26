@@ -29,11 +29,9 @@
 #include "sysmods/led.h"
 #include "sysmods/uart.h"
 #include "sysmods/adc.h"
-#include "sysmods/digitalrw.h"
-#include "sysmods/pwm.h"
-#include "usermods/manual.h"
 #include "usermods/mode.h"
-#include "usermods/ports.h"
+#include "usermods/manual.h"
+#include "usermods/analyzer.h"
 
 /* Initializes AVR microcontroller. */
 void avr_init(void) {
@@ -73,7 +71,8 @@ int main(void) {
 		PWM_task(); */
 		
 		/* usermods task */
-		MANUAL_task();
 		MODE_task();
+		MANUAL_task();
+		ANALYZER_task();
 	}
 }

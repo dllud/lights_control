@@ -29,13 +29,13 @@
 
 #define LOWER_BOUND 20
 #define UPPER_BOUND 245
+#define COND_PWM_write(cond, port, value) ((cond) ? : (PWM_write(port, value)))
 
 /* Global varibales ::vars **/
 uint16_t MANUAL_timer_white_blink;  /* 1 ms */
 uint16_t MANUAL_timer_UV_blink;  /* 1 ms */
 
 /* Local variables **/
-uint8_t white_brightness;
 
 void MANUAL_init(void) { }
 
@@ -45,31 +45,72 @@ void MANUAL_init(void) { }
  * 15 Hz = 128 raw adc
  * 17 Hz = 144 raw adc
  */
-inline uint8_t convertto1_30(uint8_t value) {
+static inline uint8_t convertto1_30(uint8_t value) {
 	return value / 8 - 1;
 }
 
 /*
  * Converts frequency to period in ms.
  */
-inline uint16_t convertFtoms(uint8_t freq) {
+static inline uint16_t convertFtoms(uint8_t freq) {
 	return 1000 / freq;
 }
 
-void MANUAL_task(void) {
-	uint8_t analog_uv;
-	if(MODE_mode == MANUAL) {
-		analog_uv = ADC_read_8bit(BLINK_UV_PIN);
-		printf("analog_uv: %u\n", analog_uv);
-		if(analog_uv < LOWER_BOUND)
-			DIGITALRW_write(UV_PORT, UV_PIN, 0);
-		else if(analog_uv > UPPER_BOUND)
-			DIGITALRW_write(UV_PORT, UV_PIN, 1);
-		else {
-			if(MANUAL_timer_UV_blink >= convertFtoms(convertto1_30(analog_uv))) {
-				MANUAL_timer_UV_blink = 0;
-				DIGITALRW_toggle(UV_PORT, UV_PIN);
-			}			
+/*
+ * Blinks the UV LED strip according to the inputs.
+ */
+static inline void blink_uv(void) {
+	uint8_t adc_uv_blink = ADC_read_8bit(BLINK_UV_PIN);
+	printf("adc_uv_blink: %u\n", adc_uv_blink);
+	if(adc_uv_blink < LOWER_BOUND)
+		DIGITALRW_write(UV_PORT, UV_PIN, 0);
+	else if(adc_uv_blink > UPPER_BOUND)
+		DIGITALRW_write(UV_PORT, UV_PIN, 1);
+	else if(MANUAL_timer_UV_blink >= convertFtoms(convertto1_30(adc_uv_blink))) {
+		MANUAL_timer_UV_blink = 0;
+		DIGITALRW_toggle(UV_PORT, UV_PIN);
+	}
+}
+
+/*
+ * Blinks the white LED strips according to the inputs.
+ */
+static inline void blink_white(void) {
+	uint8_t adc_white_dim, adc_white_blink, l_button, r_button;
+	static uint8_t toggle;
+	adc_white_dim = ADC_read_8bit(DIM_WHITE_PIN);
+	printf("adc_white_dim: %u\n", adc_white_dim);
+	l_button = DIGITALRW_read(WHITE_L_BUTTON_PORT, WHITE_L_BUTTON_PIN);
+	r_button = DIGITALRW_read(WHITE_R_BUTTON_PORT, WHITE_R_BUTTON_PIN);
+	if(l_button)
+		PWM_write(WHITE_L_PORT, adc_white_dim);
+	if(r_button)
+		PWM_write(WHITE_R_PORT, adc_white_dim);
+	
+	adc_white_blink = ADC_read_8bit(BLINK_WHITE_PIN);
+	printf("adc_white_blink: %u\n", adc_white_blink);
+	if(adc_white_blink < LOWER_BOUND) {
+		COND_PWM_write(l_button, WHITE_L_PORT, 0);
+		COND_PWM_write(r_button, WHITE_R_PORT, 0);
+	} else if(adc_white_blink > UPPER_BOUND) {
+		PWM_write(WHITE_L_PORT, adc_white_dim);
+		PWM_write(WHITE_R_PORT, adc_white_dim);
+	} else if(MANUAL_timer_white_blink >= convertFtoms(convertto1_30(adc_white_blink))) {
+		MANUAL_timer_white_blink = 0;
+		if(toggle) {
+			COND_PWM_write(l_button, WHITE_L_PORT, 0);
+			COND_PWM_write(l_button, WHITE_R_PORT, 0);
+		} else {
+			PWM_write(WHITE_L_PORT, adc_white_blink);
+			PWM_write(WHITE_R_PORT, adc_white_blink);
 		}
+		toggle ^= 1;
+	}
+}
+
+void MANUAL_task(void) {
+	if(MODE_mode == MANUAL) {
+		blink_uv();
+		blink_white();
 	}
 }
