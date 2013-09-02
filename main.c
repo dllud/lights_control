@@ -32,6 +32,7 @@
 #include "usermods/mode.h"
 #include "usermods/manual.h"
 #include "usermods/analyzer.h"
+#include "usermods/box.h"
 
 /* Initializes AVR microcontroller. */
 void avr_init(void) {
@@ -74,5 +75,6 @@ int main(void) {
 		MODE_task();
 		MANUAL_task();
 		ANALYZER_task();
+		BOX_task();
 	}
 }
