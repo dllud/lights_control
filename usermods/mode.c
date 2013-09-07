@@ -33,7 +33,9 @@ uint8_t MODE_mode;
 
 /* Local variables **/
 
-void MODE_init(void) { }
+void MODE_init(void) {
+	DIGITALRW_write(LEDS_PORT, BASE_PIN + MODE_mode, 1);
+}
 
 void MODE_task(void) {
 	static uint8_t pressed;
