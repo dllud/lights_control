@@ -30,6 +30,7 @@
 #include "sysmods/uart.h"
 #include "sysmods/adc.h"
 #include "usermods/mode.h"
+#include "usermods/ports.h"
 #include "usermods/manual.h"
 #include "usermods/analyzer.h"
 #include "usermods/box.h"
@@ -43,9 +44,6 @@ void avr_init(void) {
 				 /* 0011 1100 */
 	DDRC = 0x00; /* Arduino's analog inputs 0-5 */
 	DDRD = 0x6E; /* Arduino's digital outputs 0-7. RX = 0 and TX = 1, 0110 1110 */
-
-	/* All outputs = 0 and pull-ups off to allow reading. */
-	PORTB = PORTC = PORTD = 0x00;
 }
 
 /* Main cicle. Initializes modules and calls their tasks in round-robin. */
@@ -59,6 +57,7 @@ int main(void) {
 	
 	/* usermods init */
 	PORTS_init();
+	MODE_init();
 
 	enable_interrupts; /* Enables all interrupts (node.h) */
 	
@@ -73,8 +72,8 @@ int main(void) {
 		
 		/* usermods task */
 		MODE_task();
-		MANUAL_task();
-		ANALYZER_task();
-		BOX_task();
+		//MANUAL_task();
+		//ANALYZER_task();
+		//BOX_task();
 	}
 }

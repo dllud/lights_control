@@ -44,6 +44,7 @@ void BOX_task(void) {
 			dec = 1;
 		else if(pwm_value == 0x00)
 			dec = 0;
+		printf("box pwm %u\n", pwm_value);
 		PWM_write(BOX_PORT, pwm_value);
 	}	
 }

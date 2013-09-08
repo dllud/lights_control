@@ -39,11 +39,14 @@ void MODE_init(void) {
 
 void MODE_task(void) {
 	static uint8_t pressed;
-	if(DIGITALRW_read(MODE_PORT, MODE_PIN) && !pressed) {
-		DIGITALRW_write(LEDS_PORT, BASE_PIN + MODE_mode, 0);
-		MODE_mode = ++MODE_mode % NUM_MODES;
-		DIGITALRW_write(LEDS_PORT, BASE_PIN + MODE_mode, 1);
-		pressed = 1;
-	} else
+	if(DIGITALRW_read(MODE_PORT, MODE_PIN))
 		pressed = 0;
+	else {
+		if(!pressed) {
+			DIGITALRW_write(LEDS_PORT, BASE_PIN + MODE_mode, 0);
+			MODE_mode = ++MODE_mode % NUM_MODES;
+			DIGITALRW_write(LEDS_PORT, BASE_PIN + MODE_mode, 1);
+			pressed = 1;
+		}
+	}
 }

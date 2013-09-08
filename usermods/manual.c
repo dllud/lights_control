@@ -80,8 +80,9 @@ static inline void blink_white(void) {
 	static uint8_t toggle;
 	adc_white_dim = ADC_read_8bit(DIM_WHITE_PIN);
 	printf("adc_white_dim: %u\n", adc_white_dim);
-	l_button = DIGITALRW_read(WHITE_L_BUTTON_PORT, WHITE_L_BUTTON_PIN);
-	r_button = DIGITALRW_read(WHITE_R_BUTTON_PORT, WHITE_R_BUTTON_PIN);
+	// Using the internal pull-up resistor. Pressed = LOW.
+	l_button = !DIGITALRW_read(WHITE_L_BUTTON_PORT, WHITE_L_BUTTON_PIN);
+	r_button = !DIGITALRW_read(WHITE_R_BUTTON_PORT, WHITE_R_BUTTON_PIN);
 	if(l_button)
 		PWM_write(WHITE_L_PORT, adc_white_dim);
 	if(r_button)
