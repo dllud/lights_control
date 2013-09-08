@@ -35,7 +35,7 @@ void PORTS_init(void) {
 	PORTC = 0x00;
 	PORTD = _BV(MODE_PIN) | _BV(SEL_PIN);
 	
-	//PWM_init(&WHITE_L_PORT);
-	//PWM_init(&WHITE_R_PORT);
+	PWM_init(&WHITE_L_PORT);
+	PWM_init(&WHITE_R_PORT);
 	PWM_init(&BOX_PORT);
 }

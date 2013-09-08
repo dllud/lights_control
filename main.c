@@ -74,6 +74,6 @@ int main(void) {
 		MODE_task();
 		//MANUAL_task();
 		//ANALYZER_task();
-		//BOX_task();
+		BOX_task();
 	}
 }

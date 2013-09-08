@@ -23,7 +23,7 @@
 #include "sysmods/pwm.h"
 #include "ports.h"
 
-#define CHANGE_INTERVAL 5
+#define CHANGE_INTERVAL 1
 
 /* Global varibales ::vars **/
 uint8_t BOX_timer_pwm;  /* 100 ms */
@@ -44,7 +44,12 @@ void BOX_task(void) {
 			dec = 1;
 		else if(pwm_value == 0x00)
 			dec = 0;
-		printf("box pwm %u\n", pwm_value);
+		/*if(dec)
+			pwm_value = 0xFF;
+		else
+			pwm_value = 0x00;
+		dec ^= 1;*/
+		//printf("box pwm %u\n", pwm_value);
 		PWM_write(BOX_PORT, pwm_value);
-	}	
+	}
 }
