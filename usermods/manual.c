@@ -61,7 +61,6 @@ static inline uint16_t convertFtoms(uint8_t freq) {
  */
 static inline void blink_uv(void) {
 	uint8_t adc_uv_blink = ADC_read_8bit(BLINK_UV_PIN);
-	printf("adc_uv_blink: %u\n", adc_uv_blink);
 	if(adc_uv_blink < LOWER_BOUND)
 		DIGITALRW_write(UV_PORT, UV_PIN, 0);
 	else if(adc_uv_blink > UPPER_BOUND)
@@ -79,7 +78,7 @@ static inline void blink_white(void) {
 	uint8_t adc_white_dim, adc_white_blink, l_button, r_button;
 	static uint8_t toggle;
 	adc_white_dim = ADC_read_8bit(DIM_WHITE_PIN);
-	printf("adc_white_dim: %u\n", adc_white_dim);
+	//printf("adc_white_dim: %u\n", adc_white_dim);
 	// Using the internal pull-up resistor. Pressed = LOW.
 	l_button = !DIGITALRW_read(WHITE_L_BUTTON_PORT, WHITE_L_BUTTON_PIN);
 	r_button = !DIGITALRW_read(WHITE_R_BUTTON_PORT, WHITE_R_BUTTON_PIN);
@@ -89,7 +88,7 @@ static inline void blink_white(void) {
 		PWM_write(WHITE_R_PORT, adc_white_dim);
 	
 	adc_white_blink = ADC_read_8bit(BLINK_WHITE_PIN);
-	printf("adc_white_blink: %u\n", adc_white_blink);
+	//printf("adc_white_blink: %u\n", adc_white_blink);
 	if(adc_white_blink < LOWER_BOUND) {
 		COND_PWM_write(l_button, WHITE_L_PORT, 0);
 		COND_PWM_write(r_button, WHITE_R_PORT, 0);
@@ -113,5 +112,8 @@ void MANUAL_task(void) {
 	if(MODE_mode == MANUAL) {
 		blink_uv();
 		blink_white();
+		/*printf("adc_uv_blink: %u\n", ADC_read_8bit(BLINK_UV_PIN));
+		printf("adc_white_blink: %u\n", ADC_read_8bit(BLINK_WHITE_PIN));
+		printf("adc_white_dim: %u\n\n", ADC_read_8bit(DIM_WHITE_PIN));*/
 	}
 }

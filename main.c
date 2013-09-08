@@ -72,7 +72,7 @@ int main(void) {
 		
 		/* usermods task */
 		MODE_task();
-		//MANUAL_task();
+		MANUAL_task();
 		//ANALYZER_task();
 		BOX_task();
 	}
