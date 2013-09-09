@@ -84,8 +84,7 @@ void TIME_task(void) {
 	uint8_t elapsed_time; /* N * 200us */
 	static uint8_t t1ms_n200us = 0;
 	static uint8_t t10ms_n200us = 0;
-	static uint8_t t100ms_n10ms = 0;
-
+	static uint8_t t1s_n10ms = 0;
 #if 0  
 /* Copy to above the necessary variables according to the time units you want
  * to count. Notice that in order to have, for instace, 100 ms you need first 
@@ -121,10 +120,11 @@ void TIME_task(void) {
 	t1ms_n200us += elapsed_time;
 	if(t1ms_n200us >= TIME_1MS_N200US) {
 		t1ms_n200us -= TIME_1MS_N200US; /* 1 ms = 5 * 200 us */
-		++DIGITALRW_timer;
-		++PWM_timer;
+		//++DIGITALRW_timer;
+		//++PWM_timer;
 		++MANUAL_timer_white_blink;
 		++MANUAL_timer_UV_blink;
+		++BOX_timer_ms;
 		/*++MODULEXXX_timer; :cfg02*/
 	}
 #endif
@@ -152,10 +152,9 @@ void TIME_task(void) {
 		/* 100 ms timers (needs 10 ms)
 		 * var char:  1-255 => 0.1s - 25.5s
 		 * var int: 1-65535 => 0.1s - 6553.5s (~109m, ~1.8h) */
-		#if 1
+		#if 0
 			if(++t100ms_n10ms >= TIME_100MS_N10MS) {
 				t100ms_n10ms = 0; /* 100 ms = 10 * 10 ms */
-				++BOX_timer_pwm;
 				/*++MODULEXXX_timer; :cfg02*/
 			}
 		#endif
@@ -163,9 +162,10 @@ void TIME_task(void) {
 		/* 1s timers (needs 10 ms)
 		 * var char:  1-255 => 1s - 255s (~4.2m)
 		 * var int: 1-65535 => 1s - 65535s (~1092m, ~18.2h) */
-		#if 0
+		#if 1
 			if(++t1s_n10ms >= TIME_1S_N10MS) {
 				t1s_n10ms = 0; /* 1 s = 100 * 10 ms */
+				++BOX_timer_s;
 				/*++MODULEXXX_timer; :cfg02*/
 			
 				/* 1 min timers (needs 1 s)

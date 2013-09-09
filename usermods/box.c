@@ -23,19 +23,24 @@
 #include "sysmods/pwm.h"
 #include "ports.h"
 
-#define CHANGE_INTERVAL 1
+#define NUM_EFFECTS 2
+#define PWM_CHANGE_INTERVAL 50 /* ms */
+#define BLINK_CHANGE_INTERVAL 100 /* ms */
+#define PWM_DURATION 240 /* s = 4 m */
+#define BLINK_DURATION 10 /* s */
 
 /* Global varibales ::vars **/
-uint8_t BOX_timer_pwm;  /* 100 ms */
+uint8_t BOX_timer_ms;  /* 1 ms */
+uint8_t BOX_timer_s;  /* 1 s */
 
 /* Local variables **/
 
 void BOX_init(void) { }
 
-void BOX_task(void) {
+static inline uint8_t BOX_pwm_effect(void) {
 	static uint8_t pwm_value, dec;
-	if(BOX_timer_pwm >= CHANGE_INTERVAL) {
-		BOX_timer_pwm = 0;
+	if(BOX_timer_ms >= PWM_CHANGE_INTERVAL) {
+		BOX_timer_ms = 0;
 		if(dec)
 			pwm_value--;
 		else
@@ -44,12 +49,41 @@ void BOX_task(void) {
 			dec = 1;
 		else if(pwm_value == 0x00)
 			dec = 0;
-		/*if(dec)
-			pwm_value = 0xFF;
-		else
-			pwm_value = 0x00;
-		dec ^= 1;*/
-		//printf("box pwm %u\n", pwm_value);
 		PWM_write(BOX_PORT, pwm_value);
+		if(BOX_timer_s >= PWM_DURATION)
+			return 1;
+	}
+	return 0;
+}
+
+static inline uint8_t BOX_blink_effect(void) {
+	static uint8_t toggle;
+	if(BOX_timer_ms >= BLINK_CHANGE_INTERVAL) {
+		BOX_timer_ms = 0;
+		if(toggle)
+			PWM_write(BOX_PORT, 0xFF);
+		else
+			PWM_write(BOX_PORT, 0x00);
+		toggle ^= 1;
+		if(BOX_timer_s >= BLINK_DURATION)
+			return 1;
+	}
+	return 0;
+}
+
+void BOX_task(void) {
+	static uint8_t effect;
+	uint8_t change;
+	switch(effect) {
+		case 0:
+			change = BOX_pwm_effect();
+			break;
+		case 1:
+			change = BOX_blink_effect();
+			break;
+	}
+	if(change) {
+		BOX_timer_s = 0;
+		effect = ++effect % NUM_EFFECTS;
 	}
 }

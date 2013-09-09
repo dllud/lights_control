@@ -20,7 +20,8 @@
 /* Global includes for AVR */
 #include <avr/io.h>
 
-extern uint8_t BOX_timer_pwm;  /* 100 ms */
+extern uint8_t BOX_timer_ms;  /* 1 ms */
+extern uint8_t BOX_timer_s;  /* 1 s */
 
 /* public functions **/
 void BOX_init(void);
