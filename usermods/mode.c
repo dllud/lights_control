@@ -23,6 +23,7 @@
 #include "mode.h"
 #include "ports.h"
 #include "sysmods/digitalrw.h"
+#include "sysmods/adc.h"
 
 #define NUM_MODES 3
 #define LEDS_PORT MANUAL_LED_PORT
@@ -37,6 +38,17 @@ void MODE_init(void) {
 	DIGITALRW_write(LEDS_PORT, BASE_PIN + MODE_mode, 1);
 }
 
+static inline void MODE_config(void) {
+	switch(MODE_mode) {
+		case MANUAL:
+			ADC_ref_AVCC();
+			break;
+		case ANALYZER:
+			ADC_ref_1V();
+			break;
+	}	
+}
+
 void MODE_task(void) {
 	static uint8_t pressed;
 	if(DIGITALRW_read(MODE_PORT, MODE_PIN))
@@ -47,6 +59,7 @@ void MODE_task(void) {
 			MODE_mode = ++MODE_mode % NUM_MODES;
 			DIGITALRW_write(LEDS_PORT, BASE_PIN + MODE_mode, 1);
 			pressed = 1;
+			MODE_config();
 		}
 	}
 }
