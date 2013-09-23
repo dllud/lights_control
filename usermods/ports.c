@@ -33,7 +33,7 @@ void PORTS_init(void) {
 	 * Button pull-ups on. */
 	PORTB = _BV(WHITE_L_BUTTON_PIN) | _BV(WHITE_R_BUTTON_PIN);
 	PORTC = 0x00;
-	PORTD = _BV(MODE_PIN) | _BV(SEL_PIN);
+	PORTD = _BV(MODE_PIN);
 	
 	PWM_init(&WHITE_L_PORT);
 	PWM_init(&WHITE_R_PORT);

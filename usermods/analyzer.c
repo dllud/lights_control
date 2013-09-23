@@ -41,7 +41,7 @@ void ANALYZER_init(void) { }
 void ANALYZER_task(void) {
 	static uint8_t prev_l_peak, prev_r_peak, lvalue, rvalue;
 	static uint16_t lcounter, rcounter;
-	if(MODE_mode == ANALYZER) {
+	if(MODE_mode == ANALYZER_WHITE) {
 		lvalue = ADC_read_8bit(SOUND_L_PIN);
 		//printf("lvalue: %u\tprev_l_peak: %u\n", lvalue, prev_l_peak);
 		if(lvalue - prev_l_peak > DIF) {

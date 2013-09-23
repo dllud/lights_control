@@ -24,6 +24,7 @@
 #include "ports.h"
 #include "sysmods/digitalrw.h"
 #include "sysmods/adc.h"
+#include "sysmods/pwm.h"
 
 #define NUM_MODES 3
 #define LEDS_PORT MANUAL_LED_PORT
@@ -43,8 +44,12 @@ static inline void MODE_config(void) {
 		case MANUAL:
 			ADC_ref_AVCC();
 			break;
-		case ANALYZER:
+		case ANALYZER_WHITE:
 			ADC_ref_1V();
+			break;
+		case ANALYZER_UV:
+			PWM_write(WHITE_L_PORT, 0x00);
+			PWM_write(WHITE_R_PORT, 0x00);
 			break;
 	}	
 }

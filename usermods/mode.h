@@ -21,8 +21,8 @@
 #include <avr/io.h>
 
 #define MANUAL 0
-#define ANALYZER 1
-#define PRESET 2
+#define ANALYZER_WHITE 1
+#define ANALYZER_UV 2
 
 extern uint8_t MODE_mode;
 
