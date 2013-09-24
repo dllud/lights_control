@@ -39,33 +39,50 @@
 void ANALYZER_init(void) { }
 
 void ANALYZER_task(void) {
-	static uint8_t prev_l_peak, prev_r_peak, lvalue, rvalue;
-	static uint16_t lcounter, rcounter;
-	if(MODE_mode == ANALYZER_WHITE) {
+	static uint8_t prev_l_peak, prev_r_peak, prev_uv_peak, lvalue, rvalue, uvvalue;
+	static uint16_t lcounter, rcounter, uvcounter;
+	
+	if(MODE_mode == ANALYZER_WHITE || MODE_mode == ANALYZER_UV) {
 		lvalue = ADC_read_8bit(SOUND_L_PIN);
-		//printf("lvalue: %u\tprev_l_peak: %u\n", lvalue, prev_l_peak);
-		if(lvalue - prev_l_peak > DIF) {
-			PWM_write(WHITE_L_PORT, 0xFF);
-			prev_l_peak = lvalue * VARIANCE;
-			lcounter = 0;
-		} else {
-			PWM_write(WHITE_L_PORT, 0x00);
-			if(++lcounter > DOWN_INT) {
+		rvalue = ADC_read_8bit(SOUND_R_PIN);
+		
+		if(MODE_mode == ANALYZER_WHITE) {
+			//printf("lvalue: %u\tprev_l_peak: %u\n", lvalue, prev_l_peak);
+			if(lvalue - prev_l_peak > DIF) {
+				PWM_write(WHITE_L_PORT, 0xFF);
 				prev_l_peak = lvalue * VARIANCE;
 				lcounter = 0;
+			} else {
+				PWM_write(WHITE_L_PORT, 0x00);
+				if(++lcounter > DOWN_INT) {
+					prev_l_peak = lvalue * VARIANCE;
+					lcounter = 0;
+				}
 			}
-		}
-		
-		rvalue = ADC_read_8bit(SOUND_R_PIN);
-		if(rvalue - prev_r_peak > DIF) {
-			PWM_write(WHITE_R_PORT, 0xFF);
-			prev_r_peak = rvalue * VARIANCE;
-			rcounter = 0;
-		} else {
-			PWM_write(WHITE_R_PORT, 0x00);
-			if(++rcounter > DOWN_INT) {
+			
+			if(rvalue - prev_r_peak > DIF) {
+				PWM_write(WHITE_R_PORT, 0xFF);
 				prev_r_peak = rvalue * VARIANCE;
 				rcounter = 0;
+			} else {
+				PWM_write(WHITE_R_PORT, 0x00);
+				if(++rcounter > DOWN_INT) {
+					prev_r_peak = rvalue * VARIANCE;
+					rcounter = 0;
+				}
+			}
+		} else { /* MODE_mode == ANALYZER_UV */
+			uvvalue = (lvalue + rvalue) / 2;
+			if(uvvalue - prev_uv_peak > DIF) {
+				DIGITALRW_write(UV_PORT, UV_PIN, 1);
+				prev_uv_peak = uvvalue * VARIANCE;
+				uvcounter = 0;
+			} else {
+				DIGITALRW_write(UV_PORT, UV_PIN, 0);
+				if(++uvcounter > DOWN_INT) {
+					prev_uv_peak = uvvalue * VARIANCE;
+					uvcounter = 0;
+				}
 			}
 		}
 	}
