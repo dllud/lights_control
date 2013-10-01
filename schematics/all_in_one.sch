@@ -411,7 +411,7 @@ device=SWITCH_PUSHBUTTON_NO
 T 46800 28600 5 10 1 1 0 0 1
 value=mode
 T 46400 28300 5 10 0 0 0 0 1
-footprint=button.fp
+footprint=push_button_12mm.fp
 }
 C 46400 27500 1 0 0 switch-pushbutton-no-1.sym
 {
@@ -422,7 +422,7 @@ device=SWITCH_PUSHBUTTON_NO
 T 46800 27800 5 10 1 1 0 0 1
 value=white L
 T 46400 27500 5 10 0 0 0 0 1
-footprint=button.fp
+footprint=push_button_12mm.fp
 }
 C 46400 26700 1 0 0 switch-pushbutton-no-1.sym
 {
@@ -433,7 +433,7 @@ device=SWITCH_PUSHBUTTON_NO
 T 46800 27000 5 10 1 1 0 0 1
 value=white R
 T 46400 26700 5 10 0 0 0 0 1
-footprint=button.fp
+footprint=push_button_12mm.fp
 }
 N 47400 28300 47700 28300 4
 N 46100 26700 46400 26700 4
@@ -520,7 +520,7 @@ device=SWITCH_PUSHBUTTON_NO
 T 54400 27900 5 10 1 1 180 0 1
 value=reset
 T 53800 27400 5 10 0 0 0 0 1
-footprint=button.fp
+footprint=push_button_miniature.fp
 }
 N 53800 31200 53800 31500 4
 N 53800 30300 53800 28400 4
