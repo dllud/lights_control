@@ -1,16 +1,5 @@
 v 20110115 2
 C 37700 41100 0 0 0 title-B.sym
-C 49500 26800 1 0 0 ATmega8.sym
-{
-T 49800 31400 5 10 1 1 0 0 1
-value=ATmega168p
-T 49800 31900 5 10 0 0 0 0 1
-footprint=DIP28N
-T 51500 31400 5 10 1 1 0 0 1
-refdes=U1
-T 49795 33700 5 10 0 0 0 0 1
-symversion=20110522
-}
 N 53100 22900 53100 31500 4
 N 53100 31500 58200 31500 4
 N 58200 31100 58200 31500 4
@@ -177,7 +166,7 @@ value=0.1 μF
 T 52600 26600 5 10 0 0 0 0 1
 footprint=RADIAL_CAN 200
 }
-N 52100 23400 52100 27500 4
+N 52100 23400 52100 27200 4
 C 56800 30200 1 90 0 resistor-variable-1.sym
 {
 T 55900 31000 5 10 0 0 90 0 1
@@ -269,7 +258,7 @@ refdes=LED5
 T 44100 25900 5 10 0 0 270 0 1
 symversion=0.1
 T 44100 26200 5 10 1 1 0 0 1
-value=manual mode
+value=manual
 T 44100 26000 5 10 1 1 0 0 1
 color=red
 T 43300 26700 5 10 0 0 0 0 1
@@ -311,7 +300,7 @@ symversion=0.1
 T 41000 26000 5 10 1 1 0 0 1
 color=red
 T 41000 26200 5 10 1 1 0 0 1
-value=analyzer mode
+value=analyzer white
 T 40300 26700 5 10 0 0 0 0 1
 footprint=LED5
 }
@@ -351,7 +340,7 @@ symversion=0.1
 T 37800 25900 5 10 1 1 0 0 1
 color=red
 T 37800 26100 5 10 1 1 0 0 1
-value=preset mode
+value=analyzer UV
 T 37100 26600 5 10 0 0 0 0 1
 footprint=LED5
 }
@@ -411,7 +400,7 @@ device=SWITCH_PUSHBUTTON_NO
 T 46800 28600 5 10 1 1 0 0 1
 value=mode
 T 46400 28300 5 10 0 0 0 0 1
-footprint=push_button_12mm.fp
+footprint=push_button_12mm
 }
 C 46400 27500 1 0 0 switch-pushbutton-no-1.sym
 {
@@ -422,7 +411,7 @@ device=SWITCH_PUSHBUTTON_NO
 T 46800 27800 5 10 1 1 0 0 1
 value=white L
 T 46400 27500 5 10 0 0 0 0 1
-footprint=push_button_12mm.fp
+footprint=push_button_12mm
 }
 C 46400 26700 1 0 0 switch-pushbutton-no-1.sym
 {
@@ -433,7 +422,7 @@ device=SWITCH_PUSHBUTTON_NO
 T 46800 27000 5 10 1 1 0 0 1
 value=white R
 T 46400 26700 5 10 0 0 0 0 1
-footprint=push_button_12mm.fp
+footprint=push_button_12mm
 }
 N 47400 28300 47700 28300 4
 N 46100 26700 46400 26700 4
@@ -520,7 +509,7 @@ device=SWITCH_PUSHBUTTON_NO
 T 54400 27900 5 10 1 1 180 0 1
 value=reset
 T 53800 27400 5 10 0 0 0 0 1
-footprint=push_button_miniature.fp
+footprint=push_button_miniature
 }
 N 53800 31200 53800 31500 4
 N 53800 30300 53800 28400 4
@@ -750,3 +739,13 @@ footprint=TO92
 T 37700 24400 5 10 1 1 0 0 1
 value=2PC945
 }
+C 49500 26800 1 0 0 ATmegaX8.sym
+{
+T 49800 31400 5 10 1 1 0 0 1
+value=ATmega168p
+T 49800 31900 5 10 0 0 0 0 1
+footprint=DIP28N
+T 49800 31600 5 10 1 1 0 0 1
+refdes=U1
+}
+N 52100 27500 52100 27800 4
