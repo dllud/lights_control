@@ -5,7 +5,7 @@ In a party tent there are the following lightning devices:
 * 2 white LED strips, each covering one half of the tent (left and right side);
 * 1 set of white LEDs inside a translucent box.
 
-These devices are controlled using a microcontroller (AVR atmega168) based system. The system is composed by an electronic circuit and the code running in the microcontroller. The circuit schematic is available in [gschem gEDA](http://www.geda-project.org/) format at [all_in_one.sch](/schematics/all_in_one.sch). The code is based on [rr-avr-os](https://github.com/dllud/rr-avr-os) and available in [the lights_control GitHub repository](https://github.com/dllud/lights_control).
+These devices are controlled using a microcontroller (AVR atmega168) based system. The system is composed by an electronic circuit and the code running in the microcontroller. The circuit schematic and PCB layout are available in [gEDA](http://www.geda-project.org/) format at [all_in_one.sch](/schematics/all_in_one.sch) and [all_in_one.pcb](/schematics/all_in_one.pcb) respectively. The code is based on [rr-avr-os](https://github.com/dllud/rr-avr-os) and available in [the lights_control GitHub repository](https://github.com/dllud/lights_control).
 
 The lights_control system allows turning on/off each lightning device independently and dimming the output of the white LEDs. With such control an operator can put on a light show. The system provides a physical interface which is sketched in [interface.svg](/schematics/interface.svg) and also below:
 
