@@ -58,7 +58,7 @@ refdes=R3
 T 42200 32200 5 10 1 1 180 0 1
 value=100 Ω
 T 42100 31900 5 10 0 0 0 0 1
-footprint=R025
+footprint=r025_r3
 }
 C 45800 31800 1 180 0 resistor-1.sym
 {
@@ -233,7 +233,7 @@ device=RESISTOR
 T 38600 31900 5 10 1 1 180 0 1
 value=180 Ω
 T 38500 31600 5 10 0 0 0 0 1
-footprint=R025
+footprint=r025_r4
 }
 N 36800 31000 36800 29200 4
 N 49500 30500 38500 30600 4
@@ -486,7 +486,7 @@ refdes=U2
 T 33000 27700 5 10 0 0 0 0 1
 value=LM7805
 T 33000 27700 5 10 0 0 0 0 1
-footprint=TO220
+footprint=TO220W
 }
 N 35700 25800 35700 23400 4
 C 53700 31200 1 270 0 resistor-1.sym
@@ -494,7 +494,7 @@ C 53700 31200 1 270 0 resistor-1.sym
 T 54100 30900 5 10 0 0 270 0 1
 device=RESISTOR
 T 54400 31000 5 10 1 1 180 0 1
-refdes=R14
+refdes=R16
 T 54000 30600 5 10 1 1 0 0 1
 value=10 kΩ
 T 53700 31200 5 10 0 0 90 0 1
@@ -647,7 +647,7 @@ device=darlington, NPN
 T 47600 32170 5 10 1 1 0 6 1
 refdes=Q1
 T 46500 30695 5 10 0 1 0 0 1
-footprint=TO126
+footprint=TO126W
 T 47200 30900 5 10 1 1 0 0 1
 value=BD677A
 }
@@ -658,7 +658,7 @@ device=NPN_TRANSISTOR
 T 43600 31400 5 10 1 1 0 6 1
 refdes=Q3
 T 42884 30595 5 10 0 1 0 0 1
-footprint=TO220
+footprint=TO220W
 T 43500 30700 5 10 1 1 0 0 1
 value=BD241C
 }
@@ -669,7 +669,7 @@ device=NPN_TRANSISTOR
 T 40000 31400 5 10 1 1 0 6 1
 refdes=Q5
 T 39284 30595 5 10 0 1 0 0 1
-footprint=TO220
+footprint=TO220W
 T 39900 30700 5 10 1 1 0 0 1
 value=2SC3866
 }
