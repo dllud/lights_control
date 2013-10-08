@@ -58,7 +58,7 @@ refdes=R3
 T 42200 32200 5 10 1 1 180 0 1
 value=100 Ω
 T 42100 31900 5 10 0 0 0 0 1
-footprint=r025_r3
+footprint=r025_long_leads
 }
 C 45800 31800 1 180 0 resistor-1.sym
 {
@@ -233,7 +233,7 @@ device=RESISTOR
 T 38600 31900 5 10 1 1 180 0 1
 value=180 Ω
 T 38500 31600 5 10 0 0 0 0 1
-footprint=r025_r4
+footprint=r025_longer_leads
 }
 N 36800 31000 36800 29200 4
 N 49500 30500 38500 30600 4
