@@ -43,14 +43,17 @@
 # To rebuild project do "make clean" then "make all".
 #----------------------------------------------------------------------------
 
+# board: duemilanove, uno or custom
+# duemilanove and uno are Arduinos. Custom uses an Arduino as ISP.
+BOARD = custom
 
 # MCU name
 # Note: also configure DBBUG_MCU
-MCU = atmega328p
-
-
-# Arduino board version: duemilanove or uno
-ARDUINO_VERSION = duemilanove
+ifeq ($(BOARD),custom)
+	MCU = atmega168p
+else
+	MCU = atmega328p
+endif
 
 
 # Processor frequency.
@@ -281,26 +284,28 @@ LDFLAGS += $(PRINTF_LIB) $(SCANF_LIB) $(MATH_LIB)
 # Programming hardware
 # Type: avrdude -c ?
 # to get a full listing.
-#
-AVRDUDE_PROGRAMMER = arduino
+ifeq ($(BOARD),custom)
+	AVRDUDE_PROGRAMMER = avrisp
+else
+	AVRDUDE_PROGRAMMER = arduino
+endif
 
-ifeq ($(ARDUINO_VERSION),duemilanove)
-	AVRDUDE_PORT = /dev/ttyUSB0
-else ifeq ($(ARDUINO_VERSION),uno)
+ifeq ($(BOARD),uno)
 	AVRDUDE_PORT = /dev/ttyACM0
 else
-	AVRDUDE_PORT = /dev/COM1
+	AVRDUDE_PORT = /dev/ttyUSB0
 endif
 
 AVRDUDE_WRITE_FLASH = -U flash:w:$(TARGET).hex
 #AVRDUDE_WRITE_EEPROM = -U eeprom:w:$(TARGET).eep
+#AVRDUDE_WRITE_FUSES = -U lfuse:w:0xf7:m -U hfuse:w:0xdc:m -U efuse:w:0xf9:m
 
-ifeq ($(ARDUINO_VERSION),duemilanove)
+ifeq ($(BOARD),custom)
+	AVRDUDE_BAUD_RATE = 19200
+else ifeq ($(BOARD),duemilanove)
 	AVRDUDE_BAUD_RATE = 57600
-else ifeq ($(ARDUINO_VERSION),uno)
+else ifeq ($(BOARD),uno)
 	AVRDUDE_BAUD_RATE = 115200
-else
-	AVRDUDE_BAUD_RATE = 9600
 endif
 	
 # Uncomment the following if you want avrdude's erase cycle counter.
@@ -476,7 +481,7 @@ sizeafter:
 
 # Program the device.  
 program: set-run set-mcu clean-if+save $(TARGET).hex $(TARGET).eep
-	$(AVRDUDE) $(AVRDUDE_FLAGS) $(AVRDUDE_WRITE_FLASH) $(AVRDUDE_WRITE_EEPROM)
+	$(AVRDUDE) $(AVRDUDE_FLAGS) $(AVRDUDE_WRITE_FLASH) $(AVRDUDE_WRITE_EEPROM) $(AVRDUDE_WRITE_FUSES)
 
 
 # Generate avr-gdb config/init file which does the following:

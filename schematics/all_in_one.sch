@@ -56,7 +56,7 @@ device=RESISTOR
 T 41300 32100 5 10 1 1 0 0 1
 refdes=R3
 T 42200 32200 5 10 1 1 180 0 1
-value=100 Ω
+value=150 Ω
 T 42100 31900 5 10 0 0 0 0 1
 footprint=r025_long_leads
 }
@@ -67,7 +67,7 @@ device=RESISTOR
 T 45100 32000 5 10 1 1 0 0 1
 refdes=R2
 T 45900 32100 5 10 1 1 180 0 1
-value=100 Ω
+value=150 Ω
 T 45800 31800 5 10 0 0 0 0 1
 footprint=R025
 }
@@ -542,7 +542,7 @@ refdes=C3
 T 49100 25300 5 10 0 0 90 0 1
 symversion=0.1
 T 49900 25200 5 10 1 1 0 0 1
-value=22 pF
+value=18 pF
 T 50000 25100 5 10 0 0 0 0 1
 footprint=RADIAL_CAN 200
 }
@@ -555,7 +555,7 @@ refdes=C4
 T 50400 25300 5 10 0 0 90 0 1
 symversion=0.1
 T 51200 25200 5 10 1 1 0 0 1
-value=22 pF
+value=18 pF
 T 51300 25100 5 10 0 0 0 0 1
 footprint=RADIAL_CAN 200
 }
@@ -660,7 +660,7 @@ refdes=Q3
 T 42884 30595 5 10 0 1 0 0 1
 footprint=TO220W
 T 43500 30700 5 10 1 1 0 0 1
-value=BD241C
+value=TIP31C
 }
 C 37500 30600 1 0 0 npn_TO220.sym
 {
@@ -671,7 +671,7 @@ refdes=Q5
 T 39284 30595 5 10 0 1 0 0 1
 footprint=TO220W
 T 39900 30700 5 10 1 1 0 0 1
-value=2SC3866
+value=TIP31C
 }
 C 42300 31200 1 0 0 npn_TO92.sym
 {

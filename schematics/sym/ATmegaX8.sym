@@ -299,7 +299,7 @@ T 2250 400 5 8 0 1 0 8 1
 pintype=in
 }
 T 295 6700 5 10 0 0 0 0 1
-author=Bert Timmerman <bert.timmerman@xs4all.nl>
+author=Bert Timmerman <bert.timmerman@xs4all.nl>, minor edit by David Ludovino <david.ludovino@gmail.com>
 T 295 6500 5 10 0 0 0 0 1
 dist-license=GPL
 T 295 6300 5 10 0 0 0 0 1
