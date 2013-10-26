@@ -1,4 +1,4 @@
-v 20110115 2
+v 20131023 1
 T 300 4600 5 10 1 1 0 0 1
 value=ATmegaX8
 T 300 5300 5 10 0 0 0 0 1
@@ -298,13 +298,6 @@ pinlabel=GND
 T 2250 400 5 8 0 1 0 8 1
 pintype=in
 }
-T 295 6700 5 10 0 0 0 0 1
-author=Bert Timmerman <bert.timmerman@xs4all.nl>, minor edit by David Ludovino <david.ludovino@gmail.com>
-T 295 6500 5 10 0 0 0 0 1
-dist-license=GPL
-T 295 6300 5 10 0 0 0 0 1
-use-license=unlimited
-P 2300 1000 2600 1000 1 0 1
 {
 T 2400 1050 5 8 1 1 0 0 1
 pinnumber=7
@@ -315,3 +308,10 @@ pinlabel=VCC
 T 2250 1000 5 8 0 1 0 8 1
 pintype=in
 }
+T 295 6700 5 10 0 0 0 0 1
+author=Bert Timmerman <bert.timmerman@xs4all.nl>, minor edit (VCC pin) by David Ludovino <david.ludovino@gmail.com>
+T 295 6500 5 10 0 0 0 0 1
+dist-license=GPL 3
+T 295 6300 5 10 0 0 0 0 1
+use-license=unlimited
+P 2300 1000 2600 1000 1 0 1

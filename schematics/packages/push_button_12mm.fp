@@ -1,4 +1,8 @@
-
+# author: David Ludovino
+# email: david.ludovino@gmail.com
+# description: 12 mm push button
+# dist-license: GPL 3
+# use-license: unlimited
 Element["" "" "" "" 28978 24566 0 0 0 100 ""]
 (
 	Pin[-24816 9095 7799 2000 8399 4724 "" "2" "edge2"]
@@ -33,5 +37,4 @@ Element["" "" "" "" 28978 24566 0 0 0 100 ""]
 	ElementArc [-209 -748 12795 12795 180 90 394]
 	ElementArc [-209 -748 12795 12795 90 90 394]
 	ElementArc [-209 -748 12795 12795 0 90 394]
-
-	)
+)

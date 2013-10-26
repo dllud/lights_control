@@ -1,4 +1,4 @@
-v 20110115 2
+v 20131023 1
 P 2000 1000 2000 800 1 0 0
 {
 T 2100 850 5 6 0 0 0 6 1
@@ -50,8 +50,8 @@ z
 T 1784 -5 8 10 0 1 0 0 1
 footprint=TO220
 T 295 6700 5 10 0 0 0 0 1
-author=gEDA author, pin labeling by David Ludovino <david.ludovino@gmail.com>
+author=gEDA authors, pin labeling and footprint association by David Ludovino <david.ludovino@gmail.com>
 T 295 6500 5 10 0 0 0 0 1
-dist-license=GPL
+dist-license=GPL 3
 T 295 6300 5 10 0 0 0 0 1
 use-license=unlimited
