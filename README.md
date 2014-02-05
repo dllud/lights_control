@@ -14,7 +14,7 @@ The lights_control system allows turning on/off each lightning device independen
 Cliparts by [Vector4free](http://vector4free.com/vector/volume-knob/), [carlitos](https://openclipart.org/detail/8148/led-assortment-by-carlitos), [SABROG](https://openclipart.org/detail/15012/white-circle-button-by-sabrog-15012) and [Michele Brami](https://openclipart.org/detail/28117/round_black_crystal_button-by-mi_brami).
 
 Push-button S1 (mode) allows the selection between one of the three operation modes provided by lights_control (the current mode is indicated by LEDs 5-7):
-* manual - The operator has full control over the lights. It can use the variable resistors RV1-2 to set a blink rate of 0-70 Hz for the UV and white LED strips. With RV1-2 he can also turn them always on. RV3 dims the white LED strips from full power to off. Push-buttons S3 and S4 turn on the left and right white LED strips when pushed, overriding the commands of RV2.
+* manual - The operator has full control over the lights. It can use the variable resistors RV1-2 to set a blink rate of 0-30 Hz for the UV and white LED strips. With RV1-2 he can also turn them always on. RV3 dims the white LED strips from full power to off. Push-buttons S3 and S4 turn on the left and right white LED strips when pushed, overriding the commands of RV2.
 * analyzer white - Reads the sound input connected to ADC3-4 and does a rudimentary form of beat detection. When a beat is detected the system flashes the white LED strips.
 * analyzer UV - Does the same as the previous mode but flashes the UV LED strips instead.
 
