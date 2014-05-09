@@ -1,4 +1,4 @@
-v 20110115 2
+v 20121123 2
 C 37700 41100 0 0 0 title-B.sym
 N 53100 22900 53100 31500 4
 N 53100 31500 58200 31500 4
@@ -151,7 +151,7 @@ value=20 kΩ
 T 55400 30200 5 10 1 1 0 0 1
 description=blink UV
 T 55400 30200 5 10 0 0 0 0 1
-footprint=10kpot.fp
+footprint=22k_linear_pot.fp
 }
 C 52600 26600 1 90 0 capacitor-1.sym
 {
@@ -178,7 +178,7 @@ value=20 kΩ
 T 56800 30200 5 10 1 1 0 0 1
 description=blink white
 T 56800 30200 5 10 0 0 0 0 1
-footprint=10kpot.fp
+footprint=22k_linear_pot.fp
 }
 C 58300 30200 1 90 0 resistor-variable-1.sym
 {
@@ -191,7 +191,7 @@ value=20 kΩ
 T 58300 30200 5 10 1 1 0 0 1
 description=dim white
 T 58300 30200 5 10 0 0 0 0 1
-footprint=10kpot.fp
+footprint=22k_linear_pot.fp
 }
 N 52100 29300 58600 29300 4
 N 59000 26600 59000 28700 4
@@ -599,7 +599,7 @@ pinlabel=white L
 T 30100 30600 5 10 1 1 0 0 1
 pinlabel=UV
 T 30500 30500 5 10 0 0 0 0 1
-footprint=SIP6
+footprint=connector6.fp
 }
 N 32200 32200 32400 32200 4
 N 32200 31900 33300 31900 4
@@ -638,7 +638,7 @@ refdes=CN2
 T 59500 30700 5 8 0 0 0 0 1
 device=Stereo-Jack
 T 59000 28500 5 10 0 0 0 0 1
-footprint=SJ-3523-SMT_3.5mm_stereo_jack
+footprint=female_jack_3.5mm_stereo.fp
 }
 C 45800 30700 1 0 0 darlington_NPN_TO126.sym
 {
